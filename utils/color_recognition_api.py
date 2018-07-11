@@ -1,5 +1,5 @@
-import color_histogram_feature_extraction
-import knn_classifier
+from utils import color_histogram_feature_extraction
+from utils import knn_classifier
 import os
 from utils.image_utils import crop_image
 
