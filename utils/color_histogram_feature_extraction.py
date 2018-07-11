@@ -10,7 +10,7 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.stats import itemfreq
-import knn_classifier as knn_classifier
+from utils import knn_classifier as knn_classifier
 current_path = os.getcwd()
 
 def color_histogram_of_test_image(test_src_image):
