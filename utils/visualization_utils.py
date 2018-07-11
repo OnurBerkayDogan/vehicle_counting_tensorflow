@@ -27,13 +27,13 @@ import numpy
 import os
 
 # image utils - image saver import
-from image_utils import image_saver
+from utils import image_saver
 
 #  predicted_speed predicted_color module - import
-from speed_and_direction_prediction_module import speed_prediction
+from utils import speed_prediction
 
 # color recognition module - import
-from color_recognition_module import color_recognition_api
+from utils import color_recognition_api
 
 
 # Variables
