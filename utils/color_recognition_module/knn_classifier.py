@@ -40,12 +40,12 @@ def responseOfNeighbors(neighbors):
             all_possible_neighbors[response] += 1
         else:
             all_possible_neighbors[response] = 1
-    sortedVotes = sorted(all_possible_neighbors.iteritems(), key=operator.itemgetter(1), reverse=True)
+    sortedVotes = sorted(all_possible_neighbors.items(), key=operator.itemgetter(1), reverse=True)
     return sortedVotes[0][0]
     
 # Load image feature data to training feature vectors and test feature vector
 def loadDataset(filename, filename2, training_feature_vector=[] , test_feature_vector=[]):
-    with open(filename, 'rb') as csvfile:
+    with open(filename, 'r') as csvfile:
         lines = csv.reader(csvfile)
         dataset = list(lines)
         for x in range(len(dataset)):
@@ -53,7 +53,7 @@ def loadDataset(filename, filename2, training_feature_vector=[] , test_feature_v
                 dataset[x][y] = float(dataset[x][y])
             training_feature_vector.append(dataset[x])
 
-    with open(filename2, 'rb') as csvfile:
+    with open(filename2, 'r') as csvfile:
         lines = csv.reader(csvfile)
         dataset = list(lines)
         for x in range(len(dataset)):
