@@ -1,4 +1,4 @@
-from utils.image_utils import image_saver
+from utils import image_saver
 
 is_vehicle_detected = [0]
 current_frame_number_list = [0]
